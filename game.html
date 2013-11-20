@@ -4,13 +4,55 @@
         <title>The Dungeon Game</title>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
         <link href="gamestyle.css" rel="stylesheet" type="text/css">
-        <script src="game.js" type="text/javascript" ></script>
+        <script src="game.js" type="text/javascript"></script>
     </head>
     <body>
         <p>Dungeon Game!</p>
+        <p>Welcome to the dungeon game</p>
+        <p>Here is a description on how to play the dungeon game! yaaaaay...</p>
         <p>
-            What is your name?
+            What would you like to call your character?
                 <input type="text" id="username" size="10" value="">
         </p>
+        <button onclick="document.getElementById('outputDiv').innerHTML = username();">Button</button>
+        
+        <div id="outputDiv"></div>
+        
+        <button onclick="startGame()" id="gameStarter">Start Game</button>
+        <p></p>
+        <div id="roomStart">
+            <button>Room 1</button>
+            <button>Room 2</button>
+            <button>Room 3</button>
+            <button>Room 4</button>
+            <button>Room 5</button>
+        </div>
+        
+        <div id="room1">
+            <p>Here is a room 1</p>
+            <button onclick="riddleChooser()">Click for the riddle</button>
+            <div id="riddle"></div>
+        </div>
+        <div id="room2">
+            <p>Here is a room 2</p>
+            <button onclick="riddleChooser()">Click for the riddle</button>
+            <div id="riddle"></div>
+        </div>
+        <div id="room3">
+            <p>Here is a room 3</p>
+            <button onclick="riddleChooser()">Click for the riddle</button>
+            <div id="riddle"></div>
+        </div>
+        <div id="room4">
+            <p>here is a room 4</p>
+            <button onclick="riddleChooser()">Click for the riddle</button>
+            <div id="riddle"></div>
+        </div>
+        <div id="room5">
+            <p>here is a room 5</p>
+            <button onclick="riddleChooser()">Click for the riddle</button>
+            <div id="riddle"></div>
+        </div>
+        
     </body>
 </html>
