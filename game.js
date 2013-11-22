@@ -66,3 +66,23 @@ function nextPage(curr) {
       currPage.style.display = 'none';
       nextPage.style.display = 'block';
     }
+
+function room1button() {
+    //function
+}
+
+function room2button() {
+    //function
+}
+
+function room3button() {
+    //function
+}
+
+function room4button() {
+    //function
+}
+
+function room5button() {
+    //function
+}
