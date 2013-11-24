@@ -1,5 +1,6 @@
 function start() {
-    document.getElementById('roomStart').style.display = "none";
+    document.getElementById('roomButtons').style.display = 'none';
+    document.getElementById('rooms').style.display = 'none';
 }
 
 function username(){
@@ -9,7 +10,7 @@ function username(){
 
 function startGame() {
     document.getElementById('gameStarter').style.display = "none";
-    document.getElementById('roomStart').style.display = "block";
+    document.getElementById('roomButtons').style.display = "block";
 }
 
 function chosenriddle() {
@@ -45,7 +46,6 @@ function RandomInt(low, high)
 { 
     return Math.floor(Math.random()*(high-low+1)) + low; 
 }  
-
 function RandomChar(str) 
 {  
     return str.charAt(RandomInt(0, str.length-1)); 
@@ -56,33 +56,26 @@ function RandomOneOf(list)
     return list[RandomInt(0, list.length-1)]; 
 }
 
-function nextPage(curr) {
-      var next, currPage, nextPage;
+function changeRoom(change) {
 
-      next = curr + 1;
-      currPage = document.getElementById('page' + curr);
-      nextPage = document.getElementById('page' + next);
-      
-      currPage.style.display = 'none';
-      nextPage.style.display = 'block';
+    if (change === 1) {
+        document.getElementById('room1').style.display = 'block';
     }
-
-function room1button() {
-    //function
-}
-
-function room2button() {
-    //function
-}
-
-function room3button() {
-    //function
-}
-
-function room4button() {
-    //function
-}
-
-function room5button() {
-    //function
-}
+    if (change == 2) {
+        document.getElementById('room2').style.display = 'block';
+    }
+    if (change == 3) {
+        document.getElementById('room3').style.display = 'block';
+    }
+    if (change == 4) {
+        document.getElementById('room4').style.display = 'block';
+    }
+    if (change == 5) {
+        document.getElementById('room5').style.display = 'block';
+    }   
+     //currPage = document.getElementById('page' + curr);
+      //nextPage = document.getElementById('page' + next);
+    
+    //currRoom = document.getElementById('room' + curr);
+    //currRoom.style.display = 'none';
+    }
