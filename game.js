@@ -1,6 +1,5 @@
 function start() {
     document.getElementById('roomButtons').style.display = 'none';
-    document.getElementById('rooms').style.display = 'none';
 }
 
 function username(){
@@ -58,6 +57,11 @@ function RandomOneOf(list)
 
 function changeRoom(change) {
 
+    document.getElementById('room1').style.display = 'none';
+    document.getElementById('room2').style.display = 'none';
+    document.getElementById('room3').style.display = 'none';
+    document.getElementById('room4').style.display = 'none';
+    document.getElementById('room5').style.display = 'none';
     if (change === 1) {
         document.getElementById('room1').style.display = 'block';
     }
