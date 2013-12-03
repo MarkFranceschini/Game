@@ -12,6 +12,8 @@ function startGame() {
     document.getElementById('roomButtons').style.display = "block";
 }
 
+//chooses riddle for each room
+
 function chosenriddle() {
     var riddle = RandomOneOf(['a', 'b', 'c', 'd', 'e', 'f', 'g']);
     return riddle;
@@ -37,6 +39,8 @@ function riddleChooser5() {
     return document.getElementById('riddle5').innerHTML = chosenriddle();
 }
 
+
+// functions that allow help with randomness
 function RandomNum(low, high) 
 { 
     return Math.random()*(high-low) + low; 
@@ -54,6 +58,8 @@ function RandomOneOf(list)
 {    
     return list[RandomInt(0, list.length-1)]; 
 }
+
+// Room changing function
 
 function changeRoom(change) {
 
@@ -77,9 +83,107 @@ function changeRoom(change) {
     if (change == 5) {
         document.getElementById('room5').style.display = 'block';
     }   
-     //currPage = document.getElementById('page' + curr);
+    //Don't worry about this stuff, I was just messing around 
+    //currPage = document.getElementById('page' + curr);
       //nextPage = document.getElementById('page' + next);
     
     //currRoom = document.getElementById('room' + curr);
     //currRoom.style.display = 'none';
     }
+
+   function user(name,health,keyNumber)
+   {
+   // creates object storing user data
+   this.name = name;
+   this.health = health;
+   this.keyNumber = keyNumber;
+   
+   }
+
+  var user = new user('George',3,0);
+  
+  var room1,room2,room3,room4,room5;
+  function roomsWithKeys()
+ {
+// function that determines which rooms will have keys, only three of the five rooms will have keys
+  var num1,num2,num3;
+  //assigns a random number between 0 and 4 to each num variable
+  num1 = Math.floor(5 * Math.random());
+  num2 = Math.floor(5 * Math.random());
+  num3 = Math.floor(5 * Math.random());
+  while (num1 === num2 || num1 === num3 || num2 === num3) 
+  {
+// ensures that each number is different
+    num1 = Math.floor(5 * Math.random());
+    num2 = Math.floor(5 * Math.random());
+    num3 = Math.floor(5 * Math.random());
+  } 
+  // assigns rooms with keys or not keys
+  num1=0;
+  if (num1 === 0 || num2 === 0 || num3 ===0) {
+    room1 = true;
+  }else{
+    room1 = false;
+  }
+  if (num1 === 1 || num2 === 1 || num3 ===1) {
+    room2 = true;
+  }else{
+    room2 = false;
+  }
+  if (num1 === 2 || num2 === 2 || num3 ===2) {
+    room3 = true;
+  }else{
+    room3 = false;
+  }
+  if (num1 === 3 || num2 === 3 || num3 ===3) {
+    room4 = true;
+  }else{
+    room4 = false;
+  }
+  if (num1 === 4 || num2 === 4 || num3 ===4) {
+    room5 = true;
+  }else{
+    room5 = false;
+  } 
+  
+} 
+
+	var randomNum;
+function chosenriddle() {
+	randomNum = Math.floor(3 * Math.random())
+	var riddle =['What gets wetter and wetter the more it dries?', 'What can you catch but not throw?', 'What goes around the world but stays in a corner?'];
+   return riddle[randomNum];
+}
+
+function riddleAnswer(input){
+	// this function takes the user's answr to the riddle and compares it with the actual answer
+	var answers=['towel','cold','stamp'];
+	var answer = answers[randomNum];
+	var userAnswer = input.value.toLowerCase();
+	if (answer === userAnswer)
+	// if the answer is correct it will show the user "correct"
+	{
+		var output ='correct';
+		if (room1 === true)
+		// if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
+		{
+		    user.keyNumber = user.keyNumber + 1;
+			return output 
+		}else{
+			return output;
+		}
+	}else{
+	// if the user answers incorrectly then userHealth decreses by 1
+		var output = 'incorrect';
+		user.health = user.health - 1
+			if (user.health === 0)
+			// checks user health if it is 0 then game is over
+			{
+			return 'You die game over';
+			}
+		return output;
+	}
+	
+	
+}
+

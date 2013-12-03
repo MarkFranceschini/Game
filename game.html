@@ -6,7 +6,7 @@
         <link href="gamestyle.css" rel="stylesheet" type="text/css">
         <script src="game.js" type="text/javascript"></script>
     </head>
-    <body onload="start();">
+    <body onload="start();" style="text-align:center">
         <p>Dungeon Game!</p>
         <p>Welcome to the dungeon game</p>
         <p>Here is a description on how to play the dungeon game! yaaaaay...</p>
@@ -21,47 +21,66 @@
         <button onclick="startGame()" id="gameStarter">Start Game</button>
         <p></p>
         <div id="roomButtons">
-            <div id="room1button">
-                <button onclick="changeRoom(1)">Room 1</button>
-            </div>
-            <div id="room2button">
-                <button onclick="changeRoom(2)">Room 2</button>
-            </div>
-            <div id="room3butoon">
-                <button onclick="changeRoom(3)">Room 3</button>
-            </div>
-            <div id="room4button">
-                <button onclick="changeRoom(4)">Room 4</button>
-            </div>
-            <div id="room5button">
-                <button onclick="changeRoom(5)">Room 5</button>
-            </div>
+            <table>
+                <tr>
+                    <td>
+                        <div id="room1button">
+                        <button onclick="changeRoom(1)">Room 1</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="room2button">
+                        <button onclick="changeRoom(2)">Room 2</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="room3butoon">
+                        <button onclick="changeRoom(3)">Room 3</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="room4button">
+                            <button onclick="changeRoom(4)">Room 4</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="room5button">
+                            <button onclick="changeRoom(5)">Room 5</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
         
         <div id="rooms">
             <div id="room1">
-                <p>Here is a room 1</p>
+                <p>Here is room 1</p>
                 <button onclick="riddleChooser()">Click for the riddle</button>
+                <img src="images/hall_1.png" alt="Hallway to Room 1" height="426" width="720">
                 <div id="riddle"></div>
             </div>
             <div id="room2">
-                <p>Here is a room 2</p>
+                <p>Here is room 2</p>
                 <button onclick="riddleChooser2()">Click for the riddle</button>
+                <img src="images/hall_2.png" alt="Hallway to Room 2" height="426" width="720">
                 <div id="riddle2"></div>
             </div>
             <div id="room3">
-                <p>Here is a room 3</p>
+                <p>Here is room 3</p>
                 <button onclick="riddleChooser3()">Click for the riddle</button>
+                <img src="images/hall_3.png" alt="Hallway to Room 3" height="426" width="720">
                 <div id="riddle3"></div>
             </div>
             <div id="room4">
-                <p>here is a room 4</p>
+                <p>here is room 4</p>
                 <button onclick="riddleChooser4()">Click for the riddle</button>
+                <img src="images/hall_4.png" alt="Hallway to Room 4" height="426" width="720">
                 <div id="riddle4"></div>
             </div>
             <div id="room5">
-                <p>here is a room 5</p>
+                <p>here is room 5</p>
                 <button onclick="riddleChooser5()">Click for the riddle</button>
+                <img src="images/hall_5.png" alt="Hallway to Room 5" height="426" width="720">
                 <div id="riddle5"></div>
             </div>
         </div>
