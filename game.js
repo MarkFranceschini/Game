@@ -337,3 +337,14 @@ function riddleAnswer5(input){
         
         
 }
+ function endGame()
+  {
+    if (user.keyNumber === 3)
+      {
+      var output = 'You win!';
+      return output;
+     }else{
+      var output2 = 'You do not have enough keys to leave';
+      return output2; 
+      }
+  }
