@@ -97,7 +97,7 @@ function changeRoom(change) {
     //currRoom.style.display = 'none';
     }
 
-   function user(name,health,keyNumber)
+     function user(name,health,keyNumber)
    {
    // creates object storing user data
    this.name = name;
@@ -106,7 +106,7 @@ function changeRoom(change) {
    
    }
 
-  var user = new user('George',3,0);
+  var user = new user(document.getElementById('outputDiv').innerHTML,3,0);
   
   var room1,room2,room3,room4,room5;
   function roomsWithKeys()
@@ -154,42 +154,186 @@ function changeRoom(change) {
   
 } 
 
-	var randomNum;
-function chosenriddle() {
-	randomNum = Math.floor(3 * Math.random())
-	var riddle =['What gets wetter and wetter the more it dries?', 'What can you catch but not throw?', 'What goes around the world but stays in a corner?'];
+        var randomNum;
+function chosenriddle1() {
+        randomNum = Math.floor(3 * Math.random())
+        var riddle =['What gets wetter and wetter the more it dries?', 'What can you catch but not throw?', 'What goes around the world but stays in a corner?'];
    return riddle[randomNum];
 }
 
-function riddleAnswer(input){
-	// this function takes the user's answr to the riddle and compares it with the actual answer
-	var answers=['towel','cold','stamp'];
-	var answer = answers[randomNum];
-	var userAnswer = input.value.toLowerCase();
-	if (answer === userAnswer)
-	// if the answer is correct it will show the user "correct"
-	{
-		var output ='correct';
-		if (room1 === true)
-		// if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
-		{
-		    user.keyNumber = user.keyNumber + 1;
-			return output 
-		}else{
-			return output;
-		}
-	}else{
-	// if the user answers incorrectly then userHealth decreses by 1
-		var output = 'incorrect';
-		user.health = user.health - 1
-			if (user.health === 0)
-			// checks user health if it is 0 then game is over
-			{
-			return 'You die game over';
-			}
-		return output;
-	}
-	
-	
+function riddleAnswer1(input){
+        // this function takes the user's answr to the riddle and compares it with the actual answer
+        var answers=['towel','cold','stamp'];
+        var answer = answers[randomNum];
+        var userAnswer = input.value.toLowerCase();
+        if (answer === userAnswer)
+        // if the answer is correct it will show the user "correct"
+        {
+                var output ='correct';
+                if (room1 === true)
+                // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
+                {
+                    user.keyNumber = user.keyNumber + 1;
+                        return output; 
+                }else{
+                        return output;
+                }
+        }else{
+        // if the user answers incorrectly then userHealth decreses by 1
+                var output = 'incorrect';
+                user.health = user.health - 1
+                        if (user.health === 0)
+                        // checks user health if it is 0 then game is over
+                        {
+                        return 'You die game over';
+                        }
+                return output;
+        } 
+        
+        
 }
-
+function chosenriddle2() {
+        randomNum2 = Math.floor(3 * Math.random())
+        var riddle =['At night they come without being fetched, and by day they are lost without being stolen. What are they?', 'Tell me, what animal stinks while living but in death smells good?', 'I fly, yet I have no wings. I cry, yet I have no eyes. Darkness follows me; lower light I never see.'];
+   return riddle[randomNum2];
+   }
+   
+function riddleAnswer2(input){
+        // this function takes the user's answr to the riddle and compares it with the actual answer
+        var answers=['stars','pig','cloud'];
+        var answer = answers[randomNum2];
+        var userAnswer = input.value.toLowerCase();
+        if (answer === userAnswer)
+        // if the answer is correct it will show the user "correct"
+        {
+                var output ='correct';
+                if (room1 === true)
+                // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
+                {
+                    user.keyNumber = user.keyNumber + 1;
+                        return output 
+                }else{
+                        return output;
+                }
+        }else{
+        // if the user answers incorrectly then userHealth decreses by 1
+                var output = 'incorrect';
+                user.health = user.health - 1
+                        if (user.health === 0)
+                        // checks user health if it is 0 then game is over
+                        {
+                        return 'You die game over';
+                        }
+                return output;
+        }
+        
+        
+}
+function chosenriddle3() {
+        randomNum3 = Math.floor(3 * Math.random())
+        var riddle =['Poor people have it. Rich people need it. If you eat it you die. What is it?', 'I’m tall when I’m young and I’m short when I’m old. What am I?', 'What goes up when rain comes down?.'];
+   return riddle[randomNum3];
+   }
+function riddleAnswer3(input){
+        // this function takes the user's answr to the riddle and compares it with the actual answer
+        var answers=[ 'nothing','candle','umbrella'];
+        var answer = answers[randomNum3];
+        var userAnswer = input.value.toLowerCase();
+        if (answer === userAnswer)
+        // if the answer is correct it will show the user "correct"
+        {
+                var output ='correct';
+                if (room1 === true)
+                // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
+                {
+                    user.keyNumber = user.keyNumber + 1;
+                        return output 
+                }else{
+                        return output;
+                }
+        }else{
+        // if the user answers incorrectly then userHealth decreses by 1
+                var output = 'incorrect';
+                user.health = user.health - 1
+                        if (user.health === 0)
+                        // checks user health if it is 0 then game is over
+                        {
+                        return 'You die game over';
+                        }
+                return output;
+        }
+        
+        
+}
+function chosenriddle4() {
+        randomNum4 = Math.floor(3 * Math.random())
+        var riddle =['What has 4 eyes but can’t see?', 'What starts with the letter “t”, is filled with “t” and ends in “t”?', 'What is so delicate that saying its name breaks it?.'];
+   return riddle[randomNum4];
+   }
+function riddleAnswer4(input){
+        // this function takes the user's answr to the riddle and compares it with the actual answer
+        var answers=['mississippi','teapot','silence'];
+        var answer = answers[randomNum4];
+        var userAnswer = input.value.toLowerCase();
+        if (answer === userAnswer)
+        // if the answer is correct it will show the user "correct"
+        {
+                var output ='correct';
+                if (room1 === true)
+                // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
+                {
+                    user.keyNumber = user.keyNumber + 1;
+                        return output 
+                }else{
+                        return output;
+                }
+        }else{
+        // if the user answers incorrectly then userHealth decreses by 1
+                var output = 'incorrect';
+                user.health = user.health - 1
+                        if (user.health === 0)
+                        // checks user health if it is 0 then game is over
+                        {
+                        return 'You die game over';
+                        }
+                return output;
+        }
+        
+        
+}
+function chosenriddle5() {
+        randomNum5 = Math.floor(3 * Math.random())
+        var riddle =['How many months have 28 days?', 'If a blue house is made out of blue bricks, a yellow house is made out of yellow bricks and a pink house is made out of pink bricks, what is a green house made of?', 'What gets broken without being held??.'];
+   return riddle[randomNum5];
+   }
+function riddleAnswer5(input){
+        // this function takes the user's answr to the riddle and compares it with the actual answer
+        var answers=['12','glass','promise'];
+        var answer = answers[randomNum5];
+        var userAnswer = input.value.toLowerCase();
+        if (answer === userAnswer)
+        // if the answer is correct it will show the user "correct"
+        {
+                var output ='correct';
+                if (room1 === true)
+                // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
+                {
+                    user.keyNumber = user.keyNumber + 1;
+                        return output 
+                }else{
+                        return output;
+                }
+        }else{
+        // if the user answers incorrectly then userHealth decreses by 1
+                var output = 'incorrect';
+                user.health = user.health - 1
+                        if (user.health === 0)
+                        // checks user health if it is 0 then game is over
+                        {
+                        return 'You die game over';
+                        }
+                return output;
+        }
+        
+        
+}
