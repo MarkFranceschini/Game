@@ -173,7 +173,7 @@ function riddleAnswer1(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct';
+                var output ='correct, you got another key!';
                 if (room1 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
@@ -210,8 +210,8 @@ function riddleAnswer2(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct';
-                if (room1 === true)
+                var output ='correct, you got another key!';
+                if (room2 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
@@ -235,7 +235,7 @@ function riddleAnswer2(input){
 }
 function chosenriddle3() {
         randomNum3 = Math.floor(3 * Math.random())
-        var riddle =['Poor people have it. Rich people need it. If you eat it you die. What is it?', 'I’m tall when I’m young and I’m short when I’m old. What am I?', 'What goes up when rain comes down?.'];
+        var riddle =['Poor people have it. Rich people need it. If you eat it you die. What is it?', 'I’m tall when I’m young and I’m short when I’m old. What am I?', 'What goes up when rain comes down?'];
    return riddle[randomNum3];
    }
 function riddleAnswer3(input){
@@ -246,8 +246,8 @@ function riddleAnswer3(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct';
-                if (room1 === true)
+                var output ='correct, you got another key!';
+                if (room3 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
@@ -282,8 +282,8 @@ function riddleAnswer4(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct';
-                if (room1 === true)
+                var output ='correct, you got another key!';
+                if (room4 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
@@ -307,7 +307,7 @@ function riddleAnswer4(input){
 }
 function chosenriddle5() {
         randomNum5 = Math.floor(3 * Math.random())
-        var riddle =['How many months have 28 days?', 'If a blue house is made out of blue bricks, a yellow house is made out of yellow bricks and a pink house is made out of pink bricks, what is a green house made of?', 'What gets broken without being held??.'];
+        var riddle =['How many months have 28 days?', 'If a blue house is made out of blue bricks, a yellow house is made out of yellow bricks and a pink house is made out of pink bricks, what is a green house made of?', 'What gets broken without being held?'];
    return riddle[randomNum5];
    }
 function riddleAnswer5(input){
@@ -318,8 +318,8 @@ function riddleAnswer5(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct';
-                if (room1 === true)
+                var output ='correct, you got another key!';
+                if (room5 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
