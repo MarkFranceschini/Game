@@ -1,11 +1,19 @@
 function start() {
     document.getElementById('roomButtons').style.display = 'none';
     document.getElementById('inst').style.display = 'none';
+    document.getElementById('hide_inst_button').style.display = 'none';
 }
 
 function show_inst() {
     document.getElementById('inst').style.display = 'block'; 
     document.getElementById('inst_button').style.display = 'none';
+    document.getElementById('hide_inst_button').style.display = 'block';
+}
+
+function hide_inst() {
+    document.getElementById('inst').style.display = 'none'; 
+    document.getElementById('inst_button').style.display = 'block';
+    document.getElementById('hide_inst_button').style.display = 'none';
 }
 
 function username(){
