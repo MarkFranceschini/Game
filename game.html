@@ -57,7 +57,9 @@
         <div id="rooms">
             <div id="room1">
                 <p>Here is room 1</p>
+                Enter the answer here: <input type="text" id="answer1" size=12 value=" ">
                 <button onclick="riddleChooser()">Click for the riddle</button>
+                <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer1(answer1)"> submit the answer </button>
                 <img id="hall" src="images/hall_1.png" alt="Hallway to Room 1">
                 <div id="riddle"></div>
             </div>
