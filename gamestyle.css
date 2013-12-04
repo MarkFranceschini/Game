@@ -1,3 +1,8 @@
  #room1, #room2, #room3, #room4, #room5 {
     display: none;
 }
+
+#hall {
+    height: 426px;
+    width: 720px;
+}
