@@ -28,29 +28,25 @@ function startGame() {
 
 //chooses riddle for each room
 
-function chosenriddle() {
-    var riddle = RandomOneOf(['a', 'b', 'c', 'd', 'e', 'f', 'g']);
-    return riddle;
-}
 
 function riddleChooser() {
-        return document.getElementById('riddle').innerHTML = chosenriddle();
+        return document.getElementById('riddle').innerHTML = chosenriddle1();
 }
 
 function riddleChooser2() {
-        return document.getElementById('riddle2').innerHTML = chosenriddle();
+        return document.getElementById('riddle2').innerHTML = chosenriddle2();
 }
 
 function riddleChooser3() {
-        return document.getElementById('riddle3').innerHTML = chosenriddle();
+        return document.getElementById('riddle3').innerHTML = chosenriddle3();
 }
 
 function riddleChooser4() {
-    return document.getElementById('riddle4').innerHTML = chosenriddle();
+    return document.getElementById('riddle4').innerHTML = chosenriddle4();
 }
 
 function riddleChooser5() {
-    return document.getElementById('riddle5').innerHTML = chosenriddle();
+    return document.getElementById('riddle5').innerHTML = chosenriddle5();
 }
 
 
