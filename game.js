@@ -181,7 +181,7 @@ function riddleAnswer1(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        return 'You die game over';
+                        document.getElementById('gameOverScreen').style.display = 'block';
                         }
                 return output;
         } 
@@ -218,7 +218,7 @@ function riddleAnswer2(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        return 'You die game over';
+                        document.getElementById('gameOverScreen').style.display = 'block';
                         }
                 return output;
         }
@@ -254,7 +254,7 @@ function riddleAnswer3(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        return 'You die game over';
+                        document.getElementById('gameOverScreen').style.display = 'block';
                         }
                 return output;
         }
@@ -290,7 +290,7 @@ function riddleAnswer4(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        return 'You die game over';
+                        document.getElementById('gameOverScreen').style.display = 'block';
                         }
                 return output;
         }
@@ -326,7 +326,7 @@ function riddleAnswer5(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        return 'You die game over';
+                        document.getElementById('gameOverScreen').style.display = 'block';
                         }
                 return output;
         }
@@ -344,3 +344,7 @@ function riddleAnswer5(input){
       return output2; 
       }
   }
+  function startOver()
+{
+	location.reload();
+}
