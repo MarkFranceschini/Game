@@ -4,16 +4,8 @@ function start() {
     document.getElementById('hide_inst_button').style.display = 'none';
 }
 
-function show_inst() {
-    document.getElementById('inst').style.display = 'block'; 
-    document.getElementById('inst_button').style.display = 'none';
-    document.getElementById('hide_inst_button').style.display = 'block';
-}
-
-function hide_inst() {
-    document.getElementById('inst').style.display = 'none'; 
-    document.getElementById('inst_button').style.display = 'block';
-    document.getElementById('hide_inst_button').style.display = 'none';
+function show_instructions() {
+    alert ("You have a choice of going to 5 different rooms, 3 of the 5 rooms will have keys. In order to get a key, you must answer a riddle correctly. Each riddle has a one-word answer. If the answer is “dog” typing in “a dog” will not work. Once you collect all three keys, you win the game .You have three lives, so if you guess a riddle wrong, then you lose a life. Once you lose all you lives, game over. If you cannot think of an answer to the riddle, you may click to any other room.");
 }
 
 function username(){

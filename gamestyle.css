@@ -1,8 +1,43 @@
- #room1, #room2, #room3, #room4, #room5 {
+body {
+    text-align:center;
+    background-color: #901e1e;
+    font-weight:bold;
+}
+
+#title {
+    font-family:impact;
+    font-size: 100px;
+    margin-top: -23px;
+    margin-bottom: -20px;
+}
+
+#room1, #room2, #room3, #room4, #room5 {
     display: none;
 }
 
 #hall {
     height: 426px;
     width: 720px;
+}
+
+#inst_button {
+    margin: auto;
+}
+
+#hide_inst_button {
+    margin: auto;
+}
+
+#roomButtons {
+    margin: auto;
+}
+
+button {
+    background-color: yellow;
+    border-radius: 5px;
+    border-style:none;
+}
+
+.font_color {
+    color: yellow;
 }

@@ -6,97 +6,79 @@
         <link href="gamestyle.css" rel="stylesheet" type="text/css">
         <script src="game.js" type="text/javascript"></script>
     </head>
-    <body onload="start();" style="text-align: center">
-        <p>Dungeon Game!</p>
-        <p>Welcome to the dungeon game</p>
-        <button id="inst_button" onclick="show_inst()">Click for Instructions</button>
-        <button id="hide_inst_button" onclick="hide_inst()">Hide Instructions</button>
-        <p id="inst">You have a choice of going to 5 different rooms, 3 of the 5 rooms will have keys.<br> In order to get a key, you must answer a riddle correctly. <br> Each riddle has a one-word answer. <br> If the answer is “dog” typing in “a dog” will not work. <br> Once you collect all three keys, you win the game <br>.You have three lives, so if you guess a riddle wrong, then you lose a life. <br> Once you lose all you lives, game over. <br> If you cannot think of an answer to the riddle, you may click to any other room.
-</p>
-        <p>
-            What would you like to call your character?
-                <input type="text" id="username" size="10" value="">
+    <body onload="start();">
+        <p id="title">Dungeon Game</p>
+        <p class="font_color">Welcome to the dungeon game</p>
+        <button onclick="show_instructions()">Click For instructions</button>       
+        <p class="font_color">
+            What would you like to name your character?
+            <input type="text" id="username" size="10" value="">
+            <button onclick="document.getElementById('users_name').innerHTML = username();">Enter</button>
         </p>
-        <button onclick="document.getElementById('outputDiv').innerHTML = username();">Button</button>
-        
-        <div id="outputDiv"></div>
-        
+        <div id="users_name"></div>
         <button onclick="startGame()" id="gameStarter">Start Game</button>
-        <p></p>
         <div id="roomButtons">
-            <table>
-                <tr>
-                    <td>
-                        <div id="room1button">
-                        <button onclick="changeRoom(1)">Room 1</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="room2button">
-                        <button onclick="changeRoom(2)">Room 2</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="room3butoon">
-                        <button onclick="changeRoom(3)">Room 3</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="room4button">
-                            <button onclick="changeRoom(4)">Room 4</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div id="room5button">
-                            <button onclick="changeRoom(5)">Room 5</button>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+            <button id="room1button" onclick="changeRoom(1)">Room 1</button>
+            <button id="room2button" onclick="changeRoom(2)">Room 2</button>
+            <button id="room3button" onclick="changeRoom(3)">Room 3</button>
+            <button id="room4button" onclick="changeRoom(4)">Room 4</button>
+            <button id="room5button" onclick="changeRoom(5)">Room 5</button>           
         </div>
-        
-        <div id="rooms">
-            <div id="room1">
-                <p>Here is room 1</p>
-                Enter the answer here: <input type="text" id="answer1" size=12 value="">
-                <button onclick="riddleChooser()">Click for the riddle</button>
-                <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer1(answer1)"> submit the answer </button>
-                <img id="hall" src="images/hall_1.png" alt="Hallway to Room 1">
-                <div id="riddle"></div>
+
+        <div id="room1">
+                    <img id="hall" src="images/hall_1.png" alt="Hallway to Room 1">
+                <br>
+                    <button onclick="riddleChooser()">Click for the riddle</button>
+                <br>
+                    <div id="riddle" class="font_color"></div>
+                <br>
+                    <div class="font_color">Enter the answer here: <input type="text" id="answer1" size=12 value=""></div>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer1(answer1)"> submit the answer </button>
             </div>
-            <div id="room2">
-                <p>Here is room 2</p>
-                Enter the answer here: <input type="text" id="answer2" size=12 value="">
-                <button onclick="riddleChooser2()">Click for the riddle</button>
-                <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer2(answer2)"> submit the answer </button>
-                <img id="hall" src="images/hall_2.png" alt="Hallway to Room 2">
-                <div id="riddle2"></div>
+            
+        <div id="room2">
+                    <img id="hall" src="images/hall_2.png" alt="Hallway to Room 2">
+                <br>
+                    <button onclick="riddleChooser2()">Click for the riddle</button>
+                <br>
+                    <div id="riddle2" class="font_color"></div>
+                <br>
+                    <div class="font_color">Enter the answer here: <input type="text" id="answer2" size=12 value=""></div>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer2(answer2)"> submit the answer </button>
             </div>
-            <div id="room3">
-                <p>Here is room 3</p>
-                Enter the answer here: <input type="text" id="answer3" size=12 value="">
-                <button onclick="riddleChooser3()">Click for the riddle</button>
-                <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer3(answer3)"> submit the answer </button>
-                <img id="hall" src="images/hall_3.png" alt="Hallway to Room 3" >
-                <div id="riddle3"></div>
+            
+        <div id="room3">
+                    <img id="hall" src="images/hall_3.png" alt="Hallway to Room 3" >
+                <br>
+                    <button onclick="riddleChooser3()">Click for the riddle</button>
+                <br>
+                    <div id="riddle3" class="font_color"></div>
+                <br>
+                    <div class="font_color">Enter the answer here: <input type="text" id="answer3" size=12 value=""></div>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer3(answer3)"> submit the answer </button>
             </div>
-            <div id="room4">
-                <p>here is room 4</p>
-                Enter the answer here: <input type="text" id="answer4" size=12 value="">
-                <button onclick="riddleChooser4()">Click for the riddle</button>
-                <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer4(answer4)"> submit the answer </button>
-                <img id="hall" src="images/hall_4.png" alt="Hallway to Room 4">
-                <div id="riddle4"></div>
+            
+        <div id="room4">
+                    <img id="hall" src="images/hall_4.png" alt="Hallway to Room 4">
+                <br>
+                    <button onclick="riddleChooser4()">Click for the riddle</button>
+                <br>
+                    <div id="riddle4" class="font_color"></div>
+                <br>
+                    <div class="font_color">Enter the answer here: <input type="text" id="answer4" size=12 value=""></div>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer4(answer4)"> submit the answer </button>
             </div>
-            <div id="room5">
-                <p>here is room 5</p>
-                Enter the answer here: <input type="text" id="answer5" size=12 value="">
-                <button onclick="riddleChooser5()">Click for the riddle</button>
-                <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer5(answer5)"> submit the answer </button>
-                <img id="hall" src="images/hall_5.png" alt="Hallway to Room 5">
-                <div id="riddle5"></div>
+            
+<div id="room5">
+                    <img id="hall" src="images/hall_5.png" alt="Hallway to Room 5">
+                <br>
+                    <button onclick="riddleChooser5()">Click for the riddle</button>
+                <br>
+                    <div id="riddle5" class="font_color"></div>
+                <br>
+                    <div class="font_color">Enter the answer here: <input type="text" id="answer5" size=12 value=""></div>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer5(answer5)"> submit the answer </button>
             </div>
-        </div>
-        
+        <div id="outputDiv"></div>
     </body>
 </html>
