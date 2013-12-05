@@ -1,22 +1,19 @@
 function start() {
     document.getElementById('roomButtons').style.display = 'none';
-    document.getElementById('inst').style.display = 'none';
-    document.getElementById('hide_inst_button').style.display = 'none';
 }
 
 function show_instructions() {
     alert ("You have a choice of going to 5 different rooms, 3 of the 5 rooms will have keys. In order to get a key, you must answer a riddle correctly. Each riddle has a one-word answer. If the answer is “dog” typing in “a dog” will not work. Once you collect all three keys, you win the game .You have three lives, so if you guess a riddle wrong, then you lose a life. Once you lose all you lives, game over. If you cannot think of an answer to the riddle, you may click to any other room.");
 }
 
-function username(){
-    userName=document.getElementById('username').value;
-    return "Hello " + userName + ", welcome the the dungeon! Muahahahahaha";
-}
-
 function startGame() {
-    document.getElementById('gameStarter').style.display = "none";
     document.getElementById('roomButtons').style.display = "block";
 }
+
+//function showStartBut() {
+//    document.getElementById('gameStarter').style.display = "block";
+ //   document.getElementById('endGame').style.display = "block";
+//}
 
 //chooses riddle for each room
 
@@ -101,7 +98,7 @@ function changeRoom(change) {
   function getName(input)
    {
    name = input.value;
-   return 'welcome to my dungeon' + name + ' muahahhahahahah';
+   return 'welcome to my dungeon ' + name + ' muahahhahahahah';
    }
    var user = new user(name,3,0);
   function userInfo()

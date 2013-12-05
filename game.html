@@ -13,12 +13,9 @@
         <p class="font_color">
             What would you like to name your character?
             <input type="text" id="username" size="10" value="">
-            <button onclick="document.getElementById('outputDiv').innerHTML =getName('username') "> test</button>
+            <button onclick="document.getElementById('users_name').innerHTML =getName(username)" > Enter</button>
         </p>
-        <div id="users_name"></div>
-        
-        <div></div>
-        
+        <div id="users_name"></div> 
         <button onclick="startGame()" id="gameStarter">Start Game</button>
         <div id="roomButtons">
             <button id="room1button" onclick="changeRoom(1)">Room 1</button>
@@ -84,7 +81,7 @@
             </div>
         <div id="outputDiv"></div>
         
-        <button onclick="endGame()">Have enough keys to leave? Click here!</button>
+        <button onclick="endGame()" id="endGame">Have enough keys to leave? Click here!</button>
         <div id="win_screen">
             <img src="images/giant_door.jpg" alt="Giant Doors!">
         </div>
