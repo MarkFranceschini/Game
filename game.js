@@ -192,13 +192,7 @@ function riddleAnswer1(input){
                         }
                 return output;
         } 
-<<<<<<< HEAD
-        userInfo();
-=======
-        
->>>>>>> 036061ff81597acc7efbe624b8e34e92b3267fb0
-        
-        
+
 }
 function chosenriddle2() {
         randomNum2 = Math.floor(3 * Math.random())
