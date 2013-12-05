@@ -13,9 +13,14 @@
         <p class="font_color" id="character_namer">
             What would you like to name your character?
             <input type="text" id="username" size="10" value="">
-            <button onclick="document.getElementById('users_name').innerHTML =getName(username) + userInfo()" > Enter</button>
+            <button onclick="document.getElementById('users_name').innerHTML =getName(username); document.getElementById('userData').innerHTML = userInfo()" > Enter</button>
         </p>
-        <div id="users_name"></div> 
+        <div id="users_name"></div>
+        <br>
+        <br>
+        <div id="userData"></div>
+        <br>
+        <br>
         <button onclick="startGame() + roomsWithKeys()" id="gameStarter">Start Game</button>
         <div id="roomButtons">
             <button id="room1button" onclick="changeRoom(1)">Room 1</button>
@@ -28,7 +33,7 @@
         <div id="room1">
                     <img class="picture" src="images/hall_1.png" alt="Hallway to Room 1">
                 <br>
-                    <button onclick="riddleChooser()">Click for the riddle</button>
+                    <button onclick="riddleChooser()" id="riddleButton1">Click for the riddle</button>
                 <br>
                     <div id="riddle" class="font_color"></div>
                 <br>
@@ -39,7 +44,7 @@
         <div id="room2">
                     <img class="picture" src="images/hall_2.png" alt="Hallway to Room 2">
                 <br>
-                    <button onclick="riddleChooser2()">Click for the riddle</button>
+                    <button onclick="riddleChooser2()" id="riddleButton2">Click for the riddle</button>
                 <br>
                     <div id="riddle2" class="font_color"></div>
                 <br>
@@ -50,7 +55,7 @@
         <div id="room3">
                     <img class="picture" src="images/hall_3.png" alt="Hallway to Room 3" >
                 <br>
-                    <button onclick="riddleChooser3()">Click for the riddle</button>
+                    <button onclick="riddleChooser3()" id="riddleButton3">Click for the riddle</button>
                 <br>
                     <div id="riddle3" class="font_color"></div>
                 <br>
@@ -61,7 +66,7 @@
         <div id="room4">
                     <img class="picture" src="images/hall_4.png" alt="Hallway to Room 4">
                 <br>
-                    <button onclick="riddleChooser4()">Click for the riddle</button>
+                    <button onclick="riddleChooser4()" id="riddleButton4">Click for the riddle</button>
                 <br>
                     <div id="riddle4" class="font_color"></div>
                 <br>
@@ -72,7 +77,7 @@
 <div id="room5">
                     <img class="picture" src="images/hall_5.png" alt="Hallway to Room 5">
                 <br>
-                    <button onclick="riddleChooser5()">Click for the riddle</button>
+                    <button onclick="riddleChooser5()" id="riddleButton5">Click for the riddle</button>
                 <br>
                     <div id="riddle5" class="font_color"></div>
                 <br>

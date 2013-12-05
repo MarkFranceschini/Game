@@ -22,22 +22,27 @@ function startGame() {
 
 function riddleChooser() {
         return document.getElementById('riddle').innerHTML = chosenriddle1();
+        document.getElementById('riddleButton1').style.display= "none";
 }
 
 function riddleChooser2() {
         return document.getElementById('riddle2').innerHTML = chosenriddle2();
+    document.getElementById('riddleButton2').style.display= "none";
 }
 
 function riddleChooser3() {
         return document.getElementById('riddle3').innerHTML = chosenriddle3();
+    document.getElementById('riddleButton3').style.display= "none";
 }
 
 function riddleChooser4() {
     return document.getElementById('riddle4').innerHTML = chosenriddle4();
+    document.getElementById('riddleButton4').style.display= "none";
 }
 
 function riddleChooser5() {
     return document.getElementById('riddle5').innerHTML = chosenriddle5();
+    document.getElementById('riddleButton5').style.display= "none";
 }
 
 
