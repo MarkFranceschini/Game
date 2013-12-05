@@ -339,13 +339,12 @@ function riddleAnswer5(input){
   {
     if (user.keyNumber === 3)
       {
-      var output = 'You win!';
-      return output;
+      document.getElementById('win_screen').style.display = 'block';
      }else{
-      var output2 = 'You do not have enough keys to leave';
-      return output2; 
+      alert ("You do not have enough keys to leave");
       }
   }
+
   function startOver()
 {
 	location.reload();

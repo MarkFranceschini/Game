@@ -29,7 +29,7 @@
         </div>
 
         <div id="room1">
-                    <img id="hall" src="images/hall_1.png" alt="Hallway to Room 1">
+                    <img class="picture" src="images/hall_1.png" alt="Hallway to Room 1">
                 <br>
                     <button onclick="riddleChooser()">Click for the riddle</button>
                 <br>
@@ -40,7 +40,7 @@
             </div>
             
         <div id="room2">
-                    <img id="hall" src="images/hall_2.png" alt="Hallway to Room 2">
+                    <img class="picture" src="images/hall_2.png" alt="Hallway to Room 2">
                 <br>
                     <button onclick="riddleChooser2()">Click for the riddle</button>
                 <br>
@@ -51,7 +51,7 @@
             </div>
             
         <div id="room3">
-                    <img id="hall" src="images/hall_3.png" alt="Hallway to Room 3" >
+                    <img class="picture" src="images/hall_3.png" alt="Hallway to Room 3" >
                 <br>
                     <button onclick="riddleChooser3()">Click for the riddle</button>
                 <br>
@@ -62,7 +62,7 @@
             </div>
             
         <div id="room4">
-                    <img id="hall" src="images/hall_4.png" alt="Hallway to Room 4">
+                    <img class="picture" src="images/hall_4.png" alt="Hallway to Room 4">
                 <br>
                     <button onclick="riddleChooser4()">Click for the riddle</button>
                 <br>
@@ -73,7 +73,7 @@
             </div>
             
 <div id="room5">
-                    <img id="hall" src="images/hall_5.png" alt="Hallway to Room 5">
+                    <img class="picture" src="images/hall_5.png" alt="Hallway to Room 5">
                 <br>
                     <button onclick="riddleChooser5()">Click for the riddle</button>
                 <br>
@@ -83,5 +83,11 @@
                     <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer5(answer5)"> submit the answer </button>
             </div>
         <div id="outputDiv"></div>
+        
+        <button onclick="endGame()">Have enough keys to leave? Click here!</button>
+        <div id="win_screen">
+            <img src="images/giant_door.jpg" alt="Giant Doors!">
+        </div>
+        
     </body>
 </html>

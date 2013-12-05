@@ -15,7 +15,7 @@ body {
     display: none;
 }
 
-#hall {
+.picture {
     height: 320px;
     width: 540px;
 }
@@ -40,4 +40,8 @@ button {
 
 .font_color {
     color: yellow;
+}
+
+#win_screen {
+    display: none;
 }
