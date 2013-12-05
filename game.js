@@ -192,7 +192,7 @@ function riddleAnswer1(input){
                         }
                 return output;
         } 
-        userData();
+        
         
         
 }
