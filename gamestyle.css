@@ -11,7 +11,7 @@ body {
     margin-bottom: -20px;
 }
 
-#room1, #room2, #room3, #room4, #room5 /*, #gameStarter, #endGame */  {
+#room1, #room2, #room3, #room4, #room5, #gameOverScreen /*, #gameStarter, #endGame */  {
     display: none;
 }
 

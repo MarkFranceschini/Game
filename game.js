@@ -8,11 +8,13 @@ function show_instructions() {
 
 function startGame() {
     document.getElementById('roomButtons').style.display = "block";
+    document.getElementById('character_namer').style.display = "none";
+    document.getElementById('inst_button').style.display = "none";
 }
 
 //function showStartBut() {
 //    document.getElementById('gameStarter').style.display = "block";
- //   document.getElementById('endGame').style.display = "block";
+//    document.getElementById('endGame').style.display = "block";
 //}
 
 //chooses riddle for each room
@@ -101,9 +103,10 @@ function changeRoom(change) {
    return 'welcome to my dungeon ' + name + ' muahahhahahahah';
    }
    var user = new user(name,3,0);
-  function userInfo()
+  
+function userInfo()
   {
-	return user.name + ' ' + user.health + ' ' + user.keyNumber;
+	return user.name + '-' + user.health + '-' + user.keyNumber;
   }
   
   var room1,room2,room3,room4,room5;
@@ -172,8 +175,10 @@ function riddleAnswer1(input){
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
+                    var output ='correct, you got another key!';
                         return output; 
                 }else{
+                    var output ='correct!';
                         return output;
                 }
         }else{
@@ -204,13 +209,15 @@ function riddleAnswer2(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct, you got another key!';
+                
                 if (room2 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
+                    var output ='correct, you got another key!';
                         return output 
                 }else{
+                    var output ='correct!';
                         return output;
                 }
         }else{
@@ -240,13 +247,15 @@ function riddleAnswer3(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct, you got another key!';
+                
                 if (room3 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
-                        return output 
+                    var output ='correct, you got another key!';
+                        return output; 
                 }else{
+                    var output ='correct!';
                         return output;
                 }
         }else{
@@ -276,13 +285,15 @@ function riddleAnswer4(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct, you got another key!';
+                
                 if (room4 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
-                        return output 
+                    var output ='correct, you got another key!';
+                        return output;
                 }else{
+                    var output ='correct!';
                         return output;
                 }
         }else{
@@ -312,13 +323,15 @@ function riddleAnswer5(input){
         if (answer === userAnswer)
         // if the answer is correct it will show the user "correct"
         {
-                var output ='correct, you got another key!';
+                
                 if (room5 === true)
                 // if the room has a key in it and they answer the riddle correctly then the user will be awarded a key
                 {
                     user.keyNumber = user.keyNumber + 1;
-                        return output 
+                    var output ='correct, you got another key!';
+                        return output;
                 }else{
+                    var output ='correct!';
                         return output;
                 }
         }else{
