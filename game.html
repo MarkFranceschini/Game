@@ -13,7 +13,7 @@
         <p class="font_color" id="character_namer">
             What would you like to name your character?
             <input type="text" id="username" size="10" value="">
-            <button onclick="document.getElementById('users_name').innerHTML =getName(username); document.getElementById('userData').innerHTML = userInfo()" > Enter</button>
+            <button onclick="document.getElementById('users_name').innerHTML =getName(username); userInfo()" > Enter</button>
         </p>
         <div id="users_name"></div>
         <br>
@@ -38,7 +38,7 @@
                     <div id="riddle" class="font_color"></div>
                 <br>
                     <div class="font_color">Enter the answer here: <input type="text" id="answer1" size=12 value=""></div>
-                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer1(answer1)"> submit the answer </button>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer1(answer1); userInfo();"> submit the answer </button>
             </div>
             
         <div id="room2">
@@ -49,7 +49,7 @@
                     <div id="riddle2" class="font_color"></div>
                 <br>
                     <div class="font_color">Enter the answer here: <input type="text" id="answer2" size=12 value=""></div>
-                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer2(answer2)"> submit the answer </button>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer2(answer2); userInfo();"> submit the answer </button>
             </div>
             
         <div id="room3">
@@ -60,7 +60,7 @@
                     <div id="riddle3" class="font_color"></div>
                 <br>
                     <div class="font_color">Enter the answer here: <input type="text" id="answer3" size=12 value=""></div>
-                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer3(answer3)"> submit the answer </button>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer3(answer3); userInfo();"> submit the answer </button>
             </div>
             
         <div id="room4">
@@ -71,7 +71,7 @@
                     <div id="riddle4" class="font_color"></div>
                 <br>
                     <div class="font_color">Enter the answer here: <input type="text" id="answer4" size=12 value=""></div>
-                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer4(answer4)"> submit the answer </button>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer4(answer4); userInfo();"> submit the answer </button>
             </div>
             
 <div id="room5">
@@ -82,7 +82,7 @@
                     <div id="riddle5" class="font_color"></div>
                 <br>
                     <div class="font_color">Enter the answer here: <input type="text" id="answer5" size=12 value=""></div>
-                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer5(answer5)"> submit the answer </button>
+                    <button onclick="document.getElementById('outputDiv').innerHTML = riddleAnswer5(answer5); userInfo();"> submit the answer </button>
             </div>
         <div id="outputDiv"></div>
         

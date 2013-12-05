@@ -106,7 +106,7 @@ function changeRoom(change) {
   
 function userInfo()
   {
-	return user.name + '-' + user.health + '-' + user.keyNumber;
+      document.getElementById('userData').innerHTML= user.name + '-' + user.health + '-' + user.keyNumber;
   }
   
   var room1,room2,room3,room4,room5;
@@ -192,7 +192,7 @@ function riddleAnswer1(input){
                         }
                 return output;
         } 
-        userData();
+        userInfo();
         
         
 }
