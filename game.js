@@ -84,14 +84,8 @@ function changeRoom(change) {
     }
     if (change == 5) {
         document.getElementById('room5').style.display = 'block';
-    }   
-    //Don't worry about this stuff, I was just messing around 
-    //currPage = document.getElementById('page' + curr);
-      //nextPage = document.getElementById('page' + next);
-    
-    //currRoom = document.getElementById('room' + curr);
-    //currRoom.style.display = 'none';
-    }
+    }  
+}
 
      function user(name,health,keyNumber)
    {
@@ -99,10 +93,12 @@ function changeRoom(change) {
    this.name = name;
    this.health = health;
    this.keyNumber = keyNumber;
-   
+       return name;
+       return health;
+       return keyNumber;
    }
 
-  var user = new user(document.getElementById('outputDiv').innerHTML,3,0);
+  var user = new user("test_name",3,0);
   
   var room1,room2,room3,room4,room5;
   function roomsWithKeys()
