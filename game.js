@@ -98,13 +98,16 @@ function changeRoom(change) {
        return keyNumber;
    }
 
-     function getName(input)
+  function getName(input)
    {
    name = input.value;
    return 'welcome to my dungeon' + name + ' muahahhahahahah';
    }
-   var user = new user(name,0,3);
-
+   var user = new user(name,3,0);
+  function userInfo()
+  {
+	return user.name + ' ' + user.health + ' ' + user.keyNumber;
+  }
   
   var room1,room2,room3,room4,room5;
   function roomsWithKeys()
