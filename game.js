@@ -1,5 +1,7 @@
 function start() {
     document.getElementById('roomButtons').style.display = 'none';
+    document.getElementById('buttonDiv').style.display = 'none';
+    document.getElementById('finishGame').style.display = 'none';
 }
 
 function show_instructions() {
@@ -7,15 +9,18 @@ function show_instructions() {
 }
 
 function startGame() {
-    document.getElementById('roomButtons').style.display = "block";
-    document.getElementById('character_namer').style.display = "none";
-    document.getElementById('inst_button').style.display = "none";
+    document.getElementById('roomButtons').style.display = 'block';
+    document.getElementById('character_namer').style.display = 'none';
+    document.getElementById('inst_button').style.display = 'none';
+    document.getElementById('finishGame').style.display = 'block';
+    document.getElementById('greeting').style.display = 'none';
+    document.getElementById('users_name').style.display = 'none';
+    document.getElementById('buttonDiv').style.display = 'none';
 }
 
-//function showStartBut() {
-//    document.getElementById('gameStarter').style.display = "block";
-//    document.getElementById('endGame').style.display = "block";
-//}
+function showStartBut() {
+    document.getElementById('buttonDiv').style.display = 'block';
+}
 
 //chooses riddle for each room
 
@@ -100,13 +105,16 @@ function changeRoom(change) {
   function getName(input)
    {
    name = input.value;
-   return 'welcome to my dungeon ' + name + ' muahahhahahahah';
+   return 'Welcome to the dungeon ' + name + '! Muahahahahahahaha...';
    }
    var user = new user(name,3,0);
   
 function userInfo()
   {
-      document.getElementById('userData').innerHTML= user.name + '-' + user.health + '-' + user.keyNumber;
+      document.getElementById('userData').innerHTML= 
+          'Player: ' + user.name + 
+          '<br> Health: ' + user.health + 
+          '<br> Keys: ' + user.keyNumber;
   }
   
   var room1,room2,room3,room4,room5;
@@ -188,7 +196,13 @@ function riddleAnswer1(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        document.getElementById('gameOverScreen').style.display = 'block';
+                            document.getElementById('gameOverScreen').style.display = 'block'
+                            document.getElementById('userData').style.display = 'none';
+                            document.getElementById('roomButtons').style.display = 'none';
+                            document.getElementById('outputDiv').style.display = 'none';
+                            document.getElementById('finishGame').style.display = 'none';
+                            document.getElementById('buttonDiv').style.display = 'none';
+                            document.getElementById('room1').style.display = 'none';;
                         }
                 return output;
         } 
@@ -226,7 +240,13 @@ function riddleAnswer2(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        document.getElementById('gameOverScreen').style.display = 'block';
+                            document.getElementById('gameOverScreen').style.display = 'block';
+                            document.getElementById('userData').style.display = 'none';
+                            document.getElementById('roomButtons').style.display = 'none';
+                            document.getElementById('outputDiv').style.display = 'none';
+                            document.getElementById('finishGame').style.display = 'none';
+                            document.getElementById('buttonDiv').style.display = 'none';
+                            document.getElementById('room2').style.display = 'none';
                         }
                 return output;
         }
@@ -264,7 +284,13 @@ function riddleAnswer3(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        document.getElementById('gameOverScreen').style.display = 'block';
+                            document.getElementById('gameOverScreen').style.display = 'block'
+                            document.getElementById('userData').style.display = 'none';
+                            document.getElementById('roomButtons').style.display = 'none';
+                            document.getElementById('outputDiv').style.display = 'none';
+                            document.getElementById('finishGame').style.display = 'none';
+                            document.getElementById('buttonDiv').style.display = 'none';
+                            document.getElementById('room3').style.display = 'none';;
                         }
                 return output;
         }
@@ -302,7 +328,13 @@ function riddleAnswer4(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        document.getElementById('gameOverScreen').style.display = 'block';
+                        document.getElementById('gameOverScreen').style.display = 'block'
+                        document.getElementById('userData').style.display = 'none';
+                            document.getElementById('roomButtons').style.display = 'none';
+                            document.getElementById('outputDiv').style.display = 'none';
+                            document.getElementById('finishGame').style.display = 'none';
+                            document.getElementById('buttonDiv').style.display = 'none';
+                            document.getElementById('room4').style.display = 'none';;
                         }
                 return output;
         }
@@ -340,7 +372,13 @@ function riddleAnswer5(input){
                         if (user.health === 0)
                         // checks user health if it is 0 then game is over
                         {
-                        document.getElementById('gameOverScreen').style.display = 'block';
+                            document.getElementById('gameOverScreen').style.display = 'block';
+                            document.getElementById('userData').style.display = 'none';
+                            document.getElementById('roomButtons').style.display = 'none';
+                            document.getElementById('outputDiv').style.display = 'none';
+                            document.getElementById('finishGame').style.display = 'none';
+                            document.getElementById('buttonDiv').style.display = 'none';
+                            document.getElementById('room5').style.display = 'none';
                         }
                 return output;
         }
@@ -351,7 +389,18 @@ function riddleAnswer5(input){
   {
     if (user.keyNumber === 3)
       {
-      document.getElementById('win_screen').style.display = 'block';
+          document.getElementById('win_screen').style.display = 'block';
+          document.getElementById('room1').style.display = 'none';
+          document.getElementById('room2').style.display = 'none';
+          document.getElementById('room3').style.display = 'none';
+          document.getElementById('room4').style.display = 'none';
+          document.getElementById('room5').style.display = 'none';
+          document.getElementById('userData').style.display = 'none';
+          document.getElementById('roomButtons').style.display = 'none';
+          document.getElementById('outputDiv').style.display = 'none';
+          document.getElementById('finishGame').style.display = 'none';
+          document.getElementById('buttonDiv').style.display = 'none';
+    
      }else{
       alert ("You do not have enough keys to leave");
       }

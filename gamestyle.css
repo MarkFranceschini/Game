@@ -11,9 +11,11 @@ body {
     margin-bottom: -20px;
 }
 
-#room1, #room2, #room3, #room4, #room5, #gameOverScreen /*, #gameStarter, #endGame */  {
+#room1, #room2, #room3, #room4, #room5, #gameOverScreen {
     display: none;
 }
+
+
 
 .picture {
     height: 320px;
